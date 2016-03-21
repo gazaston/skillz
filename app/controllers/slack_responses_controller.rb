@@ -8,7 +8,7 @@ class SlackResponsesController < ApplicationController
 
   def create
     verify_slack_token
-    person = Person.where(slack_id: params[:user_id], slack_name: params[:user_name]).first_or_create
+    person = Person.where(user_id: params[:user_id], user_name: params[:user_name]).first_or_create
     person.slack_name = params[:user_name]
     # update = Update.new(update_params)
     # update.body = params[:text]
