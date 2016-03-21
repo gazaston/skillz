@@ -9,7 +9,7 @@ class Slack::Responder
   end
 
   def response
-    @response ||= "Hi"
+    @response ||= "You're currently #{message}\n<https://fg-currently.herokuapp.com/|See who's currently where>"
     # @response ||= "https://fg-currently.herokuapp.com/"
   end
 
